@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneTwoLive è un player Windows per setlist pensato per musicisti e performance live.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OneTwoLive">
+  <meta property="og:title" content="Acquista OneTwoLive — Licenza lifetime">
+  <meta property="og:description" content="OneTwoLive è un player Windows per setlist pensato per musicisti e performance live.">
+  <meta property="og:image" content="https://onetwolive.com/images/onetwolive-promo-square.png">
+  <title>Acquista OneTwoLive — Licenza lifetime</title>
+  <link rel="icon" href="../../images/OneTwoLive_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="../../site-config.js"></script>
+</head>
+<body>
+<header class="site-header site-header-static">
+  <div class="header-actions">
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="../index.html#features">Funzioni</a>
+      <a href="../index.html#preview">Anteprima</a>
+      <a href="../buy/">Acquista</a>
+      <a href="../download/">Download</a>
+      <a href="../index.html#support">Supporto</a>
+    </nav>
+
+    <div class="language-switcher" aria-label="Selezione lingua">
+      <a class="language-link" href="../../buy/" lang="en"><span aria-hidden="true">🇬🇧</span> EN</a>
+      <a class="language-link active" href="index.html" lang="it" aria-current="page"><span aria-hidden="true">🇮🇹</span> IT</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero compact-page-hero">
+    <div class="section-container page-hero-grid">
+      <div>
+        <p class="section-label">Acquista OneTwoLive</p>
+        <h1>Sblocca le setlist complete con una licenza lifetime.</h1>
+        <p class="section-intro">
+          OneTwoLive è gratuito in modalità demo con un massimo di 5 brani per setlist. La licenza completa rimuove questo limite, funziona offline dopo l’attivazione ed è utilizzabile su un massimo di 2 PC.
+        </p>
+        <div class="license-price-card">
+          <span class="price-main">€6,99</span>
+          <span class="price-note">pagamento unico · licenza personale a vita</span>
+        </div>
+        <div class="hero-actions page-actions">
+          <a id="dodo-checkout-button" class="primary-button" href="#" aria-disabled="true">Acquista licenza</a>
+          <a class="secondary-button" href="../download/">Scarica demo</a>
+        </div>
+        <p id="checkout-status" class="page-note">Link di checkout non ancora configurato. Sostituisci il Dodo Product ID in <code>site-config.js</code>.</p>
+      </div>
+      <div class="promo-card">
+        <img src="../../images/onetwolive-promo-square.png" alt="Immagine promozionale OneTwoLive">
+      </div>
+    </div>
+  </section>
+  <section class="info-section">
+    <div class="section-container info-grid">
+      <article class="info-card"><h2>Cosa include</h2><ul class="buy-benefits"><li>Setlist complete senza il limite demo di 5 brani</li><li>Attivazione su massimo 2 PC</li><li>Uso offline dopo l’attivazione</li><li>Aggiornamenti lifetime inclusi</li></ul></article>
+      <article class="info-card"><h2>Dopo l’acquisto</h2><p>Riceverai una chiave di licenza. Apri OneTwoLive, clicca <strong>Attiva licenza</strong>, poi inserisci l’email usata per l’acquisto e la tua license key.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© 2026 OneTwoLive — Un prodotto Zephyros Studio.</p>
+</footer>
+<script>
+(function () {
+  const config = window.OneTwoLiveConfig || {};
+  const productId = config.dodoProductId || "";
+  const button = document.getElementById("dodo-checkout-button");
+  const status = document.getElementById("checkout-status");
+  const isPlaceholder = !productId || productId === "PASTE_DODO_PRODUCT_ID_HERE";
+  if (isPlaceholder) return;
+  const redirectUrl = "https://onetwolive.com/it/thank-you/";
+  const params = new URLSearchParams({
+    quantity: "1",
+    redirect_url: redirectUrl,
+    paymentCurrency: "EUR",
+    showCurrencySelector: "false"
+  });
+  button.href = `${config.checkoutBaseUrl || "https://checkout.dodopayments.com/buy/"}${encodeURIComponent(productId)}?${params.toString()}`;
+  button.removeAttribute("aria-disabled");
+  status.textContent = "Checkout sicuro gestito da Dodo Payments.";
+})();
+</script>
+</body>
+</html>

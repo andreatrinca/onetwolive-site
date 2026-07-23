@@ -1,0 +1,8 @@
+// OneTwoLive website configuration.
+// Replace DODO_PRODUCT_ID with the actual Dodo Payments Product ID before going live.
+window.OneTwoLiveConfig = {
+  dodoProductId: "pdt_0NjnBnsw0oA8S4Zd1Pl5B",
+  checkoutBaseUrl: "https://checkout.dodopayments.com/buy/",
+  downloadUrl: "",
+  releaseVersion: "1.0.0"
+};

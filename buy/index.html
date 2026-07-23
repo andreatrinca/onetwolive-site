@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneTwoLive is a Windows setlist player for musicians and live performers.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OneTwoLive">
+  <meta property="og:title" content="Buy OneTwoLive — Lifetime license">
+  <meta property="og:description" content="OneTwoLive is a Windows setlist player for musicians and live performers.">
+  <meta property="og:image" content="https://onetwolive.com/images/onetwolive-promo-square.png">
+  <title>Buy OneTwoLive — Lifetime license</title>
+  <link rel="icon" href="../images/OneTwoLive_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../site-config.js"></script>
+</head>
+<body>
+<header class="site-header site-header-static">
+  <div class="header-actions">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#preview">Preview</a>
+      <a href="../buy/">Buy</a>
+      <a href="../download/">Download</a>
+      <a href="../index.html#support">Support</a>
+    </nav>
+
+    <div class="language-switcher" aria-label="Language selector">
+      <a class="language-link active" href="index.html" lang="en" aria-current="page"><span aria-hidden="true">🇬🇧</span> EN</a>
+      <a class="language-link" href="../it/buy/" lang="it"><span aria-hidden="true">🇮🇹</span> IT</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero compact-page-hero">
+    <div class="section-container page-hero-grid">
+      <div>
+        <p class="section-label">Buy OneTwoLive</p>
+        <h1>Unlock full setlists with a lifetime license.</h1>
+        <p class="section-intro">
+          OneTwoLive is free to try with up to 5 tracks per setlist. The full license removes this limit, works offline after activation and can be used on up to 2 PCs.
+        </p>
+        <div class="license-price-card">
+          <span class="price-main">€6.99</span>
+          <span class="price-note">one-time payment · lifetime personal license</span>
+        </div>
+        <div class="hero-actions page-actions">
+          <a id="dodo-checkout-button" class="primary-button" href="#" aria-disabled="true">Buy license</a>
+          <a class="secondary-button" href="../download/">Download demo</a>
+        </div>
+        <p id="checkout-status" class="page-note">Checkout link not configured yet. Replace the Dodo Product ID in <code>site-config.js</code>.</p>
+      </div>
+      <div class="promo-card">
+        <img src="../images/onetwolive-promo-square.png" alt="OneTwoLive promotional image">
+      </div>
+    </div>
+  </section>
+  <section class="info-section">
+    <div class="section-container info-grid">
+      <article class="info-card"><h2>What you get</h2><ul class="buy-benefits"><li>Full setlists without the 5-track demo limit</li><li>Activation on up to 2 PCs</li><li>Offline use after activation</li><li>Lifetime updates included</li></ul></article>
+      <article class="info-card"><h2>After purchase</h2><p>You will receive a license key. Open OneTwoLive, click <strong>Activate license</strong>, then enter the email used for purchase and your license key.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© 2026 OneTwoLive — A Zephyros Studio product.</p>
+</footer>
+<script>
+(function () {
+  const config = window.OneTwoLiveConfig || {};
+  const productId = config.dodoProductId || "";
+  const button = document.getElementById("dodo-checkout-button");
+  const status = document.getElementById("checkout-status");
+  const isPlaceholder = !productId || productId === "PASTE_DODO_PRODUCT_ID_HERE";
+  if (isPlaceholder) return;
+  const redirectUrl = "https://onetwolive.com/thank-you/";
+  const params = new URLSearchParams({
+    quantity: "1",
+    redirect_url: redirectUrl,
+    paymentCurrency: "EUR",
+    showCurrencySelector: "false"
+  });
+  button.href = `${config.checkoutBaseUrl || "https://checkout.dodopayments.com/buy/"}${encodeURIComponent(productId)}?${params.toString()}`;
+  button.removeAttribute("aria-disabled");
+  status.textContent = "Secure checkout powered by Dodo Payments.";
+})();
+</script>
+</body>
+</html>

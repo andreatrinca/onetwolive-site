@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneTwoLive è un player Windows per setlist pensato per musicisti e performance live.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OneTwoLive">
+  <meta property="og:title" content="Scarica OneTwoLive per Windows">
+  <meta property="og:description" content="OneTwoLive è un player Windows per setlist pensato per musicisti e performance live.">
+  <meta property="og:image" content="https://onetwolive.com/images/onetwolive-promo-square.png">
+  <title>Scarica OneTwoLive per Windows</title>
+  <link rel="icon" href="../../images/OneTwoLive_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="../../site-config.js"></script>
+</head>
+<body>
+<header class="site-header site-header-static">
+  <div class="header-actions">
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="../index.html#features">Funzioni</a>
+      <a href="../index.html#preview">Anteprima</a>
+      <a href="../buy/">Acquista</a>
+      <a href="../download/">Download</a>
+      <a href="../index.html#support">Supporto</a>
+    </nav>
+
+    <div class="language-switcher" aria-label="Selezione lingua">
+      <a class="language-link" href="../../download/" lang="en"><span aria-hidden="true">🇬🇧</span> EN</a>
+      <a class="language-link active" href="index.html" lang="it" aria-current="page"><span aria-hidden="true">🇮🇹</span> IT</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero compact-page-hero">
+    <div class="section-container page-hero-grid">
+      <div>
+        <p class="section-label">Download</p>
+        <h1>Scarica OneTwoLive per Windows.</h1>
+        <p class="section-intro">Installa la versione demo gratuita e inizia a preparare le tue setlist. La demo supporta fino a 5 brani per setlist; la licenza completa rimuove questo limite.</p>
+        <div class="hero-actions page-actions">
+          <a id="download-button" class="primary-button" href="#" aria-disabled="true">Scarica installer</a>
+          <a class="secondary-button" href="../buy/">Acquista licenza</a>
+        </div>
+        <p id="download-status" class="page-note">L’installer finale sarà disponibile qui a breve.</p>
+      </div>
+      <div class="promo-card"><img src="../../images/onetwolive-app-screenshot.png" alt="Screenshot dell’applicazione OneTwoLive"></div>
+    </div>
+  </section>
+  <section class="info-section"><div class="section-container info-grid"><article class="info-card"><h2>Prima dell’installazione</h2><p>OneTwoLive è un’app desktop per Windows. Mantieni i file audio originali dove si trovano: l’app li legge e crea copie renderizzate solo quando necessario.</p></article><article class="info-card"><h2>Attivazione</h2><p>Dopo l’acquisto, apri OneTwoLive e usa <strong>Attiva licenza</strong>. Una volta attivata, l’app continua a funzionare anche offline.</p></article></div></section>
+</main>
+<footer class="site-footer">
+  <p>© 2026 OneTwoLive — Un prodotto Zephyros Studio.</p>
+</footer>
+<script>
+(function () {
+  const config = window.OneTwoLiveConfig || {};
+  const button = document.getElementById("download-button");
+  const status = document.getElementById("download-status");
+  if (!config.downloadUrl) return;
+  button.href = config.downloadUrl;
+  button.removeAttribute("aria-disabled");
+  status.textContent = `Versione corrente: ${config.releaseVersion || "1.0.0"}`;
+})();
+</script>
+</body>
+</html>

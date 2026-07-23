@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneTwoLive is a Windows setlist player for musicians and live performers.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OneTwoLive">
+  <meta property="og:title" content="Download OneTwoLive for Windows">
+  <meta property="og:description" content="OneTwoLive is a Windows setlist player for musicians and live performers.">
+  <meta property="og:image" content="https://onetwolive.com/images/onetwolive-promo-square.png">
+  <title>Download OneTwoLive for Windows</title>
+  <link rel="icon" href="../images/OneTwoLive_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../site-config.js"></script>
+</head>
+<body>
+<header class="site-header site-header-static">
+  <div class="header-actions">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#preview">Preview</a>
+      <a href="../buy/">Buy</a>
+      <a href="../download/">Download</a>
+      <a href="../index.html#support">Support</a>
+    </nav>
+
+    <div class="language-switcher" aria-label="Language selector">
+      <a class="language-link active" href="index.html" lang="en" aria-current="page"><span aria-hidden="true">🇬🇧</span> EN</a>
+      <a class="language-link" href="../it/download/" lang="it"><span aria-hidden="true">🇮🇹</span> IT</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero compact-page-hero">
+    <div class="section-container page-hero-grid">
+      <div>
+        <p class="section-label">Download</p>
+        <h1>Download OneTwoLive for Windows.</h1>
+        <p class="section-intro">Install the free demo version and start preparing your setlists. The demo supports up to 5 tracks per setlist; the full license removes this limit.</p>
+        <div class="hero-actions page-actions">
+          <a id="download-button" class="primary-button" href="#" aria-disabled="true">Download installer</a>
+          <a class="secondary-button" href="../buy/">Buy license</a>
+        </div>
+        <p id="download-status" class="page-note">The final installer will be available here shortly.</p>
+      </div>
+      <div class="promo-card"><img src="../images/onetwolive-app-screenshot.png" alt="OneTwoLive application screenshot"></div>
+    </div>
+  </section>
+  <section class="info-section"><div class="section-container info-grid"><article class="info-card"><h2>Before installing</h2><p>OneTwoLive is a Windows desktop application. Keep your original audio files where they are: the app reads them and creates rendered copies only when needed.</p></article><article class="info-card"><h2>Activation</h2><p>After buying a license, open OneTwoLive and use <strong>Activate license</strong>. Once activated, the app keeps working offline.</p></article></div></section>
+</main>
+<footer class="site-footer">
+  <p>© 2026 OneTwoLive — A Zephyros Studio product.</p>
+</footer>
+<script>
+(function () {
+  const config = window.OneTwoLiveConfig || {};
+  const button = document.getElementById("download-button");
+  const status = document.getElementById("download-status");
+  if (!config.downloadUrl) return;
+  button.href = config.downloadUrl;
+  button.removeAttribute("aria-disabled");
+  status.textContent = `Current version: ${config.releaseVersion || "1.0.0"}`;
+})();
+</script>
+</body>
+</html>

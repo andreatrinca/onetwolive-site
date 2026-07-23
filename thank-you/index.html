@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneTwoLive is a Windows setlist player for musicians and live performers.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OneTwoLive">
+  <meta property="og:title" content="Thank you — OneTwoLive">
+  <meta property="og:description" content="OneTwoLive is a Windows setlist player for musicians and live performers.">
+  <meta property="og:image" content="https://onetwolive.com/images/onetwolive-promo-square.png">
+  <title>Thank you — OneTwoLive</title>
+  <link rel="icon" href="../images/OneTwoLive_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../site-config.js"></script>
+</head>
+<body>
+<header class="site-header site-header-static">
+  <div class="header-actions">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#preview">Preview</a>
+      <a href="../buy/">Buy</a>
+      <a href="../download/">Download</a>
+      <a href="../index.html#support">Support</a>
+    </nav>
+
+    <div class="language-switcher" aria-label="Language selector">
+      <a class="language-link active" href="index.html" lang="en" aria-current="page"><span aria-hidden="true">🇬🇧</span> EN</a>
+      <a class="language-link" href="../it/thank-you/" lang="it"><span aria-hidden="true">🇮🇹</span> IT</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero compact-page-hero">
+    <div class="section-container narrow-page">
+      <p class="section-label">Thank you</p>
+      <h1>Your OneTwoLive license is ready.</h1>
+      <p class="section-intro">Open OneTwoLive, click <strong>Activate license</strong>, then enter the email used for purchase and your license key.</p>
+      <div id="license-box" class="license-key-box" hidden>
+        <span>Your license key</span>
+        <code id="license-key-value"></code>
+        <button id="copy-license-button" class="secondary-button small-button" type="button">Copy license key</button>
+      </div>
+      <p id="thank-you-note" class="page-note">If your license key is not shown here, check the payment confirmation email from Dodo Payments.</p>
+      <div class="hero-actions page-actions"><a class="primary-button" href="../download/">Download OneTwoLive</a><a class="secondary-button" href="mailto:support@zephyros-studio.com">Contact support</a></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© 2026 OneTwoLive — A Zephyros Studio product.</p>
+</footer>
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const key = params.get("license_key") || params.get("licenseKey") || "";
+  const box = document.getElementById("license-box");
+  const value = document.getElementById("license-key-value");
+  const copyButton = document.getElementById("copy-license-button");
+  if (key) { box.hidden = false; value.textContent = key; }
+  copyButton.addEventListener("click", async function () {
+    if (!value.textContent) return;
+    await navigator.clipboard.writeText(value.textContent);
+    copyButton.textContent = "Copied";
+  });
+})();
+</script>
+</body>
+</html>
