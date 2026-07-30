@@ -1110,3 +1110,13 @@ body {
     padding: 28px 24px;
   }
 }
+
+.legal-page-hero {
+  min-height: auto;
+  padding-top: 120px;
+  padding-bottom: 56px;
+}
+
+.legal-page-hero + .info-section {
+  padding-top: 48px;
+}
