@@ -1120,3 +1120,153 @@ body {
 .legal-page-hero + .info-section {
   padding-top: 48px;
 }
+
+
+/* Release notes */
+.release-page-hero {
+  min-height: auto;
+  padding-top: 120px;
+  padding-bottom: 64px;
+}
+
+.release-section {
+  padding: 72px 5vw 96px;
+  background: #09090d;
+}
+
+.release-layout {
+  max-width: 980px;
+}
+
+.release-card {
+  margin-bottom: 24px;
+  padding: 34px 36px;
+  background: linear-gradient(145deg, rgba(30, 30, 40, 0.97), rgba(13, 13, 19, 0.99));
+  border: 1px solid rgba(155, 99, 255, 0.22);
+  border-radius: 22px;
+}
+
+.release-card-latest {
+  border-color: rgba(155, 99, 255, 0.52);
+  box-shadow: 0 0 38px rgba(111, 39, 255, 0.14);
+}
+
+.release-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.release-card h2,
+.release-card h3 {
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.release-card h2 {
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.release-card h3 {
+  font-size: 26px;
+}
+
+.release-kicker {
+  margin: 0 0 8px;
+  color: #9a63ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.release-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  color: #9696a4;
+  font-size: 13px;
+}
+
+.release-badge {
+  padding: 6px 10px;
+  color: #e8ddff;
+  background: rgba(111, 39, 255, 0.16);
+  border: 1px solid rgba(155, 99, 255, 0.42);
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.release-summary {
+  margin: 0 0 18px;
+  color: #b9b9c6;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.release-list {
+  margin: 0;
+  padding-left: 22px;
+  color: #c9c9d3;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.release-list li + li {
+  margin-top: 8px;
+}
+
+.release-list strong {
+  color: #ffffff;
+}
+
+.compact-release-list {
+  margin-top: 8px;
+}
+
+.release-actions {
+  margin-top: 26px;
+}
+
+.release-history-heading {
+  padding: 46px 4px 18px;
+}
+
+.release-history-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.release-link-note a {
+  color: #bda2ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.release-link-note a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .release-section {
+    padding: 56px 18px 72px;
+  }
+
+  .release-card {
+    padding: 28px 24px;
+  }
+
+  .release-card-header {
+    flex-direction: column;
+  }
+
+  .release-meta {
+    justify-content: flex-start;
+  }
+}
